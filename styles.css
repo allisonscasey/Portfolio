@@ -97,7 +97,9 @@ img {
 .section,
 .about-band,
 .contact-section,
-.site-footer {
+.site-footer,
+.project-detail-hero,
+.project-story {
   max-width: 1180px;
 }
 
@@ -380,6 +382,16 @@ h3 {
   margin-top: auto;
 }
 
+.card-actions {
+  display: flex;
+  align-items: center;
+  margin-top: 0;
+}
+
+.card-actions .button {
+  width: 100%;
+}
+
 .tag-row span {
   padding: 5px 8px;
   border-radius: 6px;
@@ -448,10 +460,111 @@ h3 {
   padding: 0 clamp(18px, 5vw, 72px) 36px;
 }
 
+.project-detail-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 0.88fr) minmax(280px, 0.48fr);
+  gap: clamp(28px, 6vw, 72px);
+  align-items: end;
+  margin: 0 auto;
+  padding: clamp(52px, 8vw, 96px) clamp(18px, 5vw, 72px) 48px;
+}
+
+.project-detail-hero h1 {
+  max-width: 13ch;
+  font-size: clamp(2.9rem, 6.5vw, 5.8rem);
+}
+
+.project-summary {
+  display: grid;
+  gap: 16px;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.72);
+  box-shadow: 0 14px 40px rgba(77, 33, 61, 0.06);
+}
+
+.project-summary dl {
+  display: grid;
+  gap: 14px;
+  margin: 0;
+}
+
+.project-summary div {
+  display: grid;
+  gap: 4px;
+  padding-top: 12px;
+  border-top: 1px solid var(--line);
+}
+
+.project-summary dt {
+  color: var(--pink-dark);
+  font-size: 0.78rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.project-summary dd {
+  margin: 0;
+  color: var(--muted);
+}
+
+.project-story {
+  display: grid;
+  gap: 34px;
+  margin: 0 auto;
+  padding: 32px clamp(18px, 5vw, 72px) 88px;
+}
+
+.story-section {
+  display: grid;
+  grid-template-columns: minmax(160px, 0.28fr) minmax(0, 1fr);
+  gap: clamp(18px, 5vw, 54px);
+  padding-top: 30px;
+  border-top: 1px solid var(--line);
+}
+
+.story-section h2 {
+  font-size: clamp(1.35rem, 2.4vw, 2rem);
+}
+
+.story-section p,
+.story-section li {
+  color: var(--muted);
+}
+
+.story-section p {
+  margin: 0 0 16px;
+}
+
+.story-section ul {
+  display: grid;
+  gap: 10px;
+  margin: 0;
+  padding-left: 18px;
+}
+
+.story-callout {
+  padding: 22px;
+  border-left: 5px solid var(--pink);
+  border-radius: 8px;
+  background: #fff0d8;
+  color: #71401f;
+  font-weight: 700;
+}
+
+.project-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
 @media (max-width: 920px) {
   .hero-section,
   .about-band,
-  .contact-section {
+  .contact-section,
+  .project-detail-hero,
+  .story-section {
     grid-template-columns: 1fr;
   }
 

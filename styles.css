@@ -120,12 +120,13 @@ p {
 }
 
 h1 {
-  max-width: 12ch;
+  max-width: 20ch;
   margin: 0;
   font-size: clamp(3rem, 7.2vw, 6.25rem);
   line-height: 0.94;
   letter-spacing: 0;
   text-wrap: balance;
+  word-break: normal;
 }
 
 h2 {
@@ -220,7 +221,7 @@ h3 {
 .hero-visual img {
   width: 100%;
   border: 1px solid rgba(234, 213, 223, 0.95);
-  border-radius: 8px 8px 42px 8px;
+  border-radius: 42px 42px 42px 42px;
   box-shadow: var(--shadow);
 }
 

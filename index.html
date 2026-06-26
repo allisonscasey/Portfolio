@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Allison Casey's engineering portfolio featuring projects, experience, technical skills, and resume highlights."
+    >
+    <title>Allison Casey | Engineering Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Allison Casey home">
+        <span class="brand-mark">AC</span>
+        <span>Allison Casey</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero-section" aria-labelledby="intro-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Engineering portfolio</p>
+          <h1 id="intro-title">Building practical systems with thoughtful, user-centered engineering.</h1>
+          <p class="hero-text">
+            I'm Allison Casey, an engineer focused on turning ambiguous problems into reliable
+            technical solutions. This portfolio highlights project work, applied skills, and the
+            kind of evidence that belongs beside a resume.
+          </p>
+          <div class="hero-actions" aria-label="Primary actions">
+            <a class="button primary" href="#projects">View projects</a>
+            <a class="button secondary" href="#contact">Get in touch</a>
+          </div>
+          <dl class="hero-stats" aria-label="Portfolio highlights">
+            <div>
+              <dt>Focus</dt>
+              <dd>Systems, software, and product-minded engineering</dd>
+            </div>
+            <div>
+              <dt>Style</dt>
+              <dd>Clear documentation, testable decisions, steady iteration</dd>
+            </div>
+          </dl>
+        </div>
+        <figure class="hero-visual">
+          <img
+            src="assets/hero-console.svg"
+            alt="Abstract engineering workspace with dashboards, code panels, and connected systems"
+          >
+        </figure>
+      </section>
+
+      <section class="section" id="projects" aria-labelledby="projects-title">
+        <div class="section-heading">
+          <p class="eyebrow">Selected work</p>
+          <h2 id="projects-title">Engineering Projects</h2>
+          <p>
+            Replace these starter cards with your strongest work: class projects, internships,
+            research, build logs, or shipped tools. Each card is structured to read like a resume
+            bullet with room for proof.
+          </p>
+        </div>
+
+        <div class="project-controls" aria-label="Project filters">
+          <button class="filter-button active" type="button" data-filter="all">All</button>
+          <button class="filter-button" type="button" data-filter="software">Software</button>
+          <button class="filter-button" type="button" data-filter="systems">Systems</button>
+          <button class="filter-button" type="button" data-filter="data">Data</button>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card" data-category="software">
+            <div class="card-topline">
+              <span class="project-type">Software</span>
+              <span class="project-date">Featured</span>
+            </div>
+            <h3>Project Name One</h3>
+            <p>
+              Built a full-stack or application project that solved a specific workflow problem
+              with a clear interface, modular code, and measurable outcomes.
+            </p>
+            <ul class="impact-list">
+              <li>Designed the core user flow and implemented the primary interaction path.</li>
+              <li>Documented architecture, tradeoffs, and testing approach for reviewers.</li>
+            </ul>
+            <div class="tag-row" aria-label="Technologies">
+              <span>React</span>
+              <span>API</span>
+              <span>Testing</span>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="systems">
+            <div class="card-topline">
+              <span class="project-type">Systems</span>
+              <span class="project-date">Build</span>
+            </div>
+            <h3>Project Name Two</h3>
+            <p>
+              Developed a technical system with attention to reliability, constraints, and
+              integration between hardware, software, or operational components.
+            </p>
+            <ul class="impact-list">
+              <li>Translated requirements into a working prototype and validation plan.</li>
+              <li>Improved performance, safety, or maintainability through iteration.</li>
+            </ul>
+            <div class="tag-row" aria-label="Technologies">
+              <span>Python</span>
+              <span>CAD</span>
+              <span>Controls</span>
+            </div>
+          </article>
+
+          <article class="project-card" data-category="data">
+            <div class="card-topline">
+              <span class="project-type">Data</span>
+              <span class="project-date">Analysis</span>
+            </div>
+            <h3>Project Name Three</h3>
+            <p>
+              Analyzed a data-rich engineering question, built reproducible notebooks or scripts,
+              and communicated findings through visual summaries.
+            </p>
+            <ul class="impact-list">
+              <li>Cleaned and modeled source data to surface decision-ready insights.</li>
+              <li>Presented results with concise visuals and clear assumptions.</li>
+            </ul>
+            <div class="tag-row" aria-label="Technologies">
+              <span>Python</span>
+              <span>Pandas</span>
+              <span>Visualization</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section resume-section" id="experience" aria-labelledby="experience-title">
+        <div class="section-heading">
+          <p class="eyebrow">Resume extension</p>
+          <h2 id="experience-title">Experience Snapshot</h2>
+          <p>
+            Use this area for internships, research roles, leadership, coursework, or work
+            experience that benefits from a little more context than a one-page resume allows.
+          </p>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item">
+            <span class="timeline-marker" aria-hidden="true"></span>
+            <div>
+              <p class="role-meta">Role or Organization &middot; Dates</p>
+              <h3>Engineering Role Title</h3>
+              <p>
+                Summarize the scope, team context, and strongest result. Keep the language active:
+                designed, built, automated, analyzed, validated, improved.
+              </p>
+            </div>
+          </article>
+          <article class="timeline-item">
+            <span class="timeline-marker" aria-hidden="true"></span>
+            <div>
+              <p class="role-meta">Course, Lab, or Team &middot; Dates</p>
+              <h3>Technical Leadership or Project Work</h3>
+              <p>
+                Add proof points that help hiring managers understand your technical range and how
+                you work with constraints, teammates, and users.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section skills-section" id="skills" aria-labelledby="skills-title">
+        <div class="section-heading">
+          <p class="eyebrow">Capabilities</p>
+          <h2 id="skills-title">Technical Toolkit</h2>
+        </div>
+        <div class="skills-grid">
+          <section class="skill-block" aria-labelledby="languages-title">
+            <h3 id="languages-title">Languages</h3>
+            <p>Python, JavaScript, C/C++, MATLAB, SQL</p>
+          </section>
+          <section class="skill-block" aria-labelledby="tools-title">
+            <h3 id="tools-title">Tools</h3>
+            <p>Git, Linux, CAD, data notebooks, testing frameworks, documentation systems</p>
+          </section>
+          <section class="skill-block" aria-labelledby="strengths-title">
+            <h3 id="strengths-title">Strengths</h3>
+            <p>Problem framing, prototyping, debugging, communication, cross-functional teamwork</p>
+          </section>
+        </div>
+      </section>
+
+      <section class="contact-section" id="contact" aria-labelledby="contact-title">
+        <div>
+          <p class="eyebrow">Next step</p>
+          <h2 id="contact-title">Let's connect.</h2>
+          <p>
+            Add your preferred email, LinkedIn, GitHub, and resume link here. The layout is ready
+            for recruiters, collaborators, or project reviewers to find the essentials quickly.
+          </p>
+        </div>
+        <div class="contact-actions">
+          <a class="button primary" href="mailto:your.email@example.com">Email</a>
+          <a class="button secondary" href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a class="button secondary" href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; <span id="year"></span> Allison Casey. Built to grow with the work.</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

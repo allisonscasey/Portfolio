@@ -225,13 +225,15 @@ h3 {
   box-shadow: var(--shadow);
 }
 
-/* Layout container */
+/* Layout container - properly centered with matching site margins */
 .about-band {
   display: grid;
-  grid-template-columns: minmax(320px, 360px) 1fr;
-  gap: clamp(2rem, 4vw, 4rem);
-  padding: clamp(3.5rem, 6vw, 5rem) clamp(20px, 5vw, 64px);
-  margin: 40px auto;
+  grid-template-columns: minmax(300px, 340px) 1fr;
+  gap: clamp(2.5rem, 5vw, 4.5rem);
+  max-width: 1180px;
+  width: calc(100% - clamp(36px, 10vw, 144px));
+  margin: 60px auto !important; /* Centered with top/bottom breathing room */
+  padding: clamp(3.5rem, 6vw, 5rem) clamp(24px, 5vw, 64px);
   background: linear-gradient(135deg, #3d1029 0%, #68153e 100%);
   color: #ffffff;
   border-radius: 28px;
@@ -246,7 +248,7 @@ h3 {
 }
 
 .about-kicker {
-  font-size: clamp(2.5rem, 5vw, 3.8rem);
+  font-size: clamp(2.5rem, 4.5vw, 3.8rem);
   font-weight: 800;
   letter-spacing: -0.02em;
   color: #ff9ec4;
@@ -295,17 +297,18 @@ h3 {
 .about-main {
   display: flex;
   flex-direction: column;
-  gap: 1.75rem;
+  justify-content: space-between;
+  gap: 2rem;
 }
 
 .about-copy h2 {
-  font-size: clamp(1.8rem, 3.4vw, 2.75rem);
+  font-size: clamp(1.8rem, 3.2vw, 2.6rem);
   line-height: 1.15;
   font-weight: 700;
   letter-spacing: -0.01em;
   color: #ffffff;
-  margin: 0 0 1rem 0;
-  overflow-wrap: normal !important; /* Disables mid-word splitting */
+  margin: 0 0 1.2rem 0;
+  overflow-wrap: normal !important;
   word-break: normal !important;
   hyphens: none !important;
 }
@@ -318,54 +321,39 @@ h3 {
   margin: 0;
 }
 
-/* Engineering Pillar Badges */
-.about-band .about-notes {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+/* Off-duty button styling */
+.about-offduty-action {
+  margin-top: 1rem;
 }
 
-.about-band .about-notes span {
-  display: inline-block;
-  padding: 8px 14px;
-  border-radius: 20px;
+.button.offduty-btn {
+  display: inline-flex;
+  align-items: center;
   background: rgba(255, 255, 255, 0.12);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.28);
   color: #ffffff;
-  font-size: 0.82rem;
-  font-weight: 650;
+  padding: 0.75rem 1.4rem;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 0.92rem;
+  letter-spacing: 0.02em;
+  backdrop-filter: blur(8px);
+  transition: all 180ms ease;
 }
 
-/* Off-duty card */
-.about-personal-card {
-  margin-top: 0.5rem;
-  padding: 1.25rem 1.5rem;
-  border-left: 3px solid #ff9ec4;
-  background: rgba(0, 0, 0, 0.2);
-  border-radius: 0 14px 14px 0;
-  max-width: 62ch;
+.button.offduty-btn:hover {
+  background: #ff9ec4;
+  border-color: #ff9ec4;
+  color: #3d1029;
+  transform: translateY(-2px);
 }
 
-.personal-kicker {
-  font-size: 0.72rem;
-  font-weight: 800;
-  letter-spacing: 0.1em;
-  color: #ff9ec4;
-  margin-bottom: 0.35rem;
-}
-
-.about-personal-card p {
-  margin: 0;
-  font-size: 0.94rem;
-  line-height: 1.55;
-  color: rgba(255, 255, 255, 0.88);
-}
-
-/* Responsive adjustment for phones/tablets */
+/* Responsive collapse on tablets/phones */
 @media (max-width: 860px) {
   .about-band {
     grid-template-columns: 1fr;
     gap: 2.5rem;
+    width: calc(100% - 36px);
   }
 }
 

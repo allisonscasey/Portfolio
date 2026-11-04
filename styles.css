@@ -226,18 +226,27 @@ h3 {
 }
 
 /* Layout container - properly centered with matching site margins */
+/* Layout container: stretches full width edge-to-edge, content centers inside */
 .about-band {
-  display: grid;
-  grid-template-columns: minmax(300px, 340px) 1fr;
-  gap: clamp(2.5rem, 5vw, 4.5rem);
-  max-width: 1180px;
-  width: calc(100% - clamp(36px, 10vw, 144px));
-  margin: 60px auto !important; /* Centered with top/bottom breathing room */
-  padding: clamp(3.5rem, 6vw, 5rem) clamp(24px, 5vw, 64px);
-  background: linear-gradient(135deg, #3d1029 0%, #68153e 100%);
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 64px 0 !important;
+  padding: clamp(48px, 6vw, 84px) clamp(18px, 5vw, 72px) !important;
+  background: linear-gradient(135deg, #3d1029 0%, #68153e 100%) !important;
   color: #ffffff;
-  border-radius: 28px;
   box-sizing: border-box;
+  display: flex !important;
+  justify-content: center !important;
+}
+
+/* Inner content wrapper: locks to 1180px and centers */
+.about-band-inner {
+  display: grid;
+  grid-template-columns: minmax(280px, 320px) 1fr;
+  gap: clamp(2rem, 5vw, 4.5rem);
+  width: 100%;
+  max-width: 1180px;
+  align-items: start;
 }
 
 /* Left sidebar styling */

@@ -225,54 +225,121 @@ h3 {
   box-shadow: var(--shadow);
 }
 
+/* Layout container */
 .about-band {
   display: grid;
-  grid-template-columns: 0.42fr minmax(0, 1fr);
-  gap: clamp(20px, 5vw, 58px);
-  margin: 0 auto;
-  padding: 58px clamp(18px, 5vw, 72px);
-  border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-  background: linear-gradient(90deg, rgba(77, 33, 61, 0.98), rgba(159, 31, 92, 0.95));
-  color: var(--surface);
+  grid-template-columns: 280px 1fr;
+  gap: 3.5rem;
+  padding: 5rem 2rem;
+  background: linear-gradient(135deg, #3d1029 0%, #68153e 100%);
+  color: #ffffff;
+}
+
+/* Left sidebar styling */
+.about-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
 }
 
 .about-kicker {
-  align-self: start;
-  color: var(--rose);
-  font-size: clamp(2.6rem, 8vw, 7rem);
+  font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 800;
-  line-height: 0.86;
+  letter-spacing: -0.02em;
+  color: #ff9ec4;
+  line-height: 1;
+}
+
+.about-spec-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  padding: 1.5rem;
+  backdrop-filter: blur(8px);
+}
+
+.spec-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.spec-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
+  color: #ffb8d4;
+  font-weight: 700;
+}
+
+.spec-value {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.spec-detail {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* Right main column styling */
+.about-main {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .about-copy h2 {
-  max-width: 850px;
-  color: var(--surface);
-  font-size: clamp(2rem, 4.8vw, 4.8rem);
+  font-size: clamp(1.8rem, 3.5vw, 2.75rem);
+  line-height: 1.1;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0 0 1rem 0;
 }
 
-.about-copy p {
-  max-width: 720px;
-  margin: 24px 0 0;
-  color: #f9dce8;
-  font-size: 1.08rem;
+.about-body {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 65ch;
+  margin: 0;
 }
 
-.about-notes {
-  grid-column: 2;
-  flex-wrap: wrap;
-  gap: 10px;
+/* Off-duty / Outside academia card */
+.about-personal-card {
+  margin-top: 0.5rem;
+  padding: 1.25rem 1.5rem;
+  border-left: 3px solid #ff9ec4;
+  background: rgba(0, 0, 0, 0.15);
+  border-radius: 0 10px 10px 0;
+  max-width: 62ch;
 }
 
-.about-notes span {
-  padding: 8px 12px;
-  border: 1px solid rgba(255, 255, 255, 0.24);
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.1);
-  color: #fff8fb;
-  font-size: 0.82rem;
-  font-weight: 800;
+.personal-kicker {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #ff9ec4;
+  margin-bottom: 0.35rem;
+}
+
+.about-personal-card p {
+  margin: 0;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* Responsive adjustment for phones/tablets */
+@media (max-width: 860px) {
+  .about-band {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
 }
 
 .section {

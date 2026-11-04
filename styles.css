@@ -120,19 +120,15 @@ p {
 }
 
 h1 {
-  max-width: 100%;
+  max-width: none;
   margin: 0;
-  /* Lowered the minimum floor and growth rate so the 17-character word always fits */
-  font-size: clamp(2rem, 5.2vw, 5.5rem);
-  line-height: 0.98;
+  font-size: clamp(2.2rem, 5vw, 5.25rem);
+  line-height: 1;
   letter-spacing: -0.01em;
   text-wrap: balance;
-  
-  /* Hard rules to stop mid-word breaks and hyphenation */
   overflow-wrap: normal !important;
   word-break: keep-all !important;
   hyphens: none !important;
-  white-space: normal;
 }
 
 h2 {

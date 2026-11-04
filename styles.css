@@ -289,7 +289,7 @@ h3 {
 }
 
 .spec-label {
-  font-size: 0.72rem;
+  font-size: 0.98rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   color: #ffb8d4;
@@ -297,8 +297,14 @@ h3 {
 }
 
 .spec-value {
-  font-size: 0.98rem;
+  font-size: 0.72rem;
   font-weight: 650;
+  color: #ffffff;
+  line-height: 1.35;
+}
+.spec-subvalue {
+  font-size: 0.72rem;
+  font-weight: 325;
   color: #ffffff;
   line-height: 1.35;
 }

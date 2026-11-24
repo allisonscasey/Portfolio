@@ -3,21 +3,112 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Off-Duty | Allison Casey</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Life in Motion | Allison Casey</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="styles.css?v=4">
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="index.html"><span>&larr; Back to Portfolio</span></a>
+      <a class="brand" href="index.html" aria-label="Back to Allison Casey Portfolio">
+        <span>&larr; Allison Casey</span>
+      </a>
+      <nav class="nav-links" aria-label="Primary navigation">
+        <a href="index.html#about">About</a>
+        <a href="index.html#projects">Projects</a>
+        <a href="index.html#experience">Experience</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
     </header>
 
-    <main class="section" style="max-width: 900px; margin: 0 auto; padding-top: 60px;">
-      <p class="eyebrow">Life Beyond the Lab</p>
-      <h1>Off-Duty</h1>
-      <p class="hero-text">
-        A look into what keeps me inspired outside of engineering—from everyday moments to traveling the world.
-      </p>
-      <!-- You can add a photo grid or hobby cards here whenever you are ready! -->
+    <main class="section">
+      <div class="section-heading">
+        <p class="eyebrow">Life in Motion</p>
+        <h1>Social + Leisure</h1>
+        <p>
+          When I’m not in classes or working on projects, this is what you will usually find me doing. Hover over each tile to read more.
+        </p>
+      </div>
+
+      <!-- 2x2 Understated Tile Grid -->
+      <div class="leisure-grid">
+        
+       <!-- TILE 2: Formula One -->
+        <article class="leisure-tile">
+          <h2 class="tile-header">Watching Formula One</h2>
+          <div class="tile-frame">
+            <img src="assets/F1.jpg" alt="Formula One race weekend on the track">
+            <div class="tile-overlay">
+              <p>
+                What other sport demands as much from its engineers as its athletes? Watching the races is thrilling, but the real draw for me is the engineering behind the car. Traveling to two races and speaking with engineers in the garage sparked a deep curiosity for what happens on the backend, from aerodynamic design to real-time data analysis.
+              </p>
+            </div>
+          </div>
+        </article>
+        
+        <!-- TILE 1: Travel -->
+        <article class="leisure-tile">
+          <h2 class="tile-header">Traveling the World</h2>
+          <div class="tile-frame">
+            <img src="assets/travel.jpg" alt="Traveling in New Orleans">
+            <div class="tile-overlay">
+              <p>
+                I love immersing myself in different cultures—so far, I’ve visited five continents and fifteen countries. If you want to win me over, take me somewhere tropical. Right now, French Polynesia and The Netherlands are tied for my favorites.
+              </p>
+            </div>
+          </div>
+        </article>
+        
+        <!-- TILE 4: Dancing -->
+        <article class="leisure-tile">
+          <h2 class="tile-header">Dance &amp; Choreography</h2>
+          <div class="tile-frame">
+            <img src="assets/dance.jpg" alt="Dance choreography and performance">
+            <div class="tile-overlay">
+              <p>
+                Growing up as a competitive dancer training 20+ hours a week alongside school taught me discipline, time management, and how to handle rejection. While my twenty-year-old body has officially retired from competing, I spend my "5-9 after my 9-5" time during the summer choreographing routines for my high school dance team to perform at football and basketball games. This has been a good way of getting my fix without breaking my back.
+              </p>
+            </div>
+          </div>
+        </article>
+        
+        <!-- TILE 5: Chi Omega -->
+        <article class="leisure-tile">
+          <h2 class="tile-header">Chi Omega</h2>
+          <div class="tile-frame">
+            <img src="assets/chiomega.jpg" alt="Chi Omega chapter leadership and sisterhood">
+            <div class="tile-overlay">
+              <p>
+                One of the best parts of my college experience has been joining Chi Omega. The women I am surrounded with in this chapter pour into one another immensely, and always push me to be a better leader, learner, and friend. I have grown tremendously in my communication skills and leadership through the positions I’ve held in the chapter as a Regional Model Initiate and as the Hospitality Chair.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <!-- TILE 3: Friends & Family -->
+        <article class="leisure-tile">
+          <h2 class="tile-header">Friends &amp; Family</h2>
+          <div class="tile-frame">
+            <img src="assets/friends.jpg" alt="Hanging out with friends and family">
+            <div class="tile-overlay">
+              <p>
+                Everyone needs a solid work-life balance, and I’m lucky to have the best people in my corner. Whether we’re having a movie and game night at home, trying a new restaurant, or having a weekend getaway, we’re always up to something fun. They also know that when my "Do Not Disturb" goes on, I mean it—that’s the balance part.
+              </p>
+            </div>
+          </div>
+        </article>
+        
+      </div>
     </main>
+
+    <footer class="site-footer">
+      <p>&copy; <span id="year"></span> Allison Casey. Built to grow with the work.</p>
+    </footer>
+
+    <script src="script.js"></script>
   </body>
 </html>

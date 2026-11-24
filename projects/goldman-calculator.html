@@ -37,12 +37,50 @@
         gap: 12px;
         margin-top: 24px;
       }
+      /* Differentiated right-hand metadata card */
+      .detail-card {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        padding: 24px;
+        border-radius: 16px;
+        background: rgba(255, 255, 255, 0.78);
+        border: 1px solid var(--line);
+        box-shadow: 0 12px 32px rgba(77, 33, 61, 0.06);
+      }
+      .detail-card > div + div {
+        padding-top: 16px;
+        border-top: 1px solid var(--line);
+      }
+      .detail-label {
+        display: block;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        color: var(--accent, #d92672);
+        margin-bottom: 6px;
+      }
+      .detail-card p {
+        margin: 0;
+        font-size: 0.92rem;
+        line-height: 1.5;
+        color: var(--muted);
+      }
+      /* Harmonized callout text color */
+      .callout-box {
+        color: var(--muted);
+      }
+      .callout-box strong {
+        color: var(--ink);
+        font-weight: 600;
+      }
     </style>
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="../index.html" aria-label="Allison Casey home">
-        <span>Allison Casey</span>
+      <a class="brand" href="../index.html#projects" aria-label="Back to Allison Casey Projects">
+        <span>&larr; Allison Casey</span>
       </a>
       <nav class="nav-links" aria-label="Primary navigation">
         <a href="../index.html#about">About</a>
@@ -53,7 +91,7 @@
     </header>
 
     <main>
-      <!-- Top Hero Matching Your Template -->
+      <!-- Top Hero -->
       <section class="section detail-hero">
         <div class="detail-intro">
           <p class="eyebrow">Software &amp; Data Project</p>
@@ -62,8 +100,7 @@
             An educational investment analytics platform combining CAPM return projections, Monte Carlo risk simulations, and an AI-powered portfolio advisor.
           </p>
           <div class="hero-btn-group">
-            <a class="button primary" href="../index.html#projects">&larr; Back to projects</a>
-            <a class="button secondary" href="https://github.com/ifidone/GS-ELS-Group3" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+            <a class="button primary" href="https://github.com/ifidone/GS-ELS-Group3" target="_blank" rel="noopener noreferrer">View on GitHub</a>
             <a class="button secondary" href="https://www.youtube.com/watch?v=YFyNY46obnU" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
           </div>
         </div>
@@ -139,7 +176,7 @@
         <h2>Modeling &amp; Validation</h2>
         <div>
           <p>
-            Projection workflows fetch real-time beta and historical price deltas to compute CAPM annualized rates ($r = r_f + \beta(E[R] - r_f)$) and continuous compounding curves ($FV = P \cdot e^{rt}$). Alongside deterministic projections, our Monte Carlo engine samples randomized returns around historical means to surface percentile risk metrics across single funds and weighted portfolios.
+            Projection workflows fetch real-time beta and historical price deltas to compute CAPM annualized rates (<em>r</em> = <em>r</em><sub>f</sub> + &beta;(E[<em>R</em>] &minus; <em>r</em><sub>f</sub>)) and continuous compounding curves (<em>FV</em> = <em>P</em> &middot; <em>e</em><sup><em>rt</em></sup>). Alongside deterministic projections, our Monte Carlo engine samples randomized returns around historical means to surface percentile risk metrics across single funds and weighted portfolios.
           </p>
           <div class="callout-box">
             <strong>End-to-End Verification:</strong> Validated all API endpoints, UID ownership rules, and database state transitions across Postman, pgAdmin, and Google Cloud runtime logs.

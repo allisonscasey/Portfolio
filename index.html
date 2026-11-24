@@ -128,33 +128,35 @@
 
         <div class="project-controls" aria-label="Project filters">
           <button class="filter-button active" type="button" data-filter="all">All</button>
-          <button class="filter-button" type="button" data-filter="software">Software</button>
-          <button class="filter-button" type="button" data-filter="systems">Systems</button>
-          <button class="filter-button" type="button" data-filter="data">Data</button>
+          <button class="filter-button" type="button" data-filter="software">Software &amp; Data</button>
+          <button class="filter-button" type="button" data-filter="mechanical">Mechanical</button>
+          <button class="filter-button" type="button" data-filter="electrical">Electrical</button>
         </div>
 
         <div class="project-grid">
           <article class="project-card" data-category="software">
             <div class="card-topline">
-              <span class="project-type">Software</span>
-              <span class="project-date">Featured</span>
+              <span class="project-type">Software &amp; Data</span>
+              <span class="project-date">Spring 2026</span>
             </div>
-            <h3>Project Name One</h3>
-            <p>
-              Built a full-stack or application project that solved a specific workflow problem
-              with a clear interface, modular code, and measurable outcomes.
-            </p>
-            <ul class="impact-list">
-              <li>Designed the core user flow and implemented the primary interaction path.</li>
-              <li>Documented architecture, tradeoffs, and testing approach for reviewers.</li>
-            </ul>
+            <h3>Goldman Sachs Mutual Fund Calculator</h3>
+            <div class="card-view" data-view="all">
+              <p>
+                Full-stack investment analytics platform combining CAPM return projections, Monte Carlo risk simulations, and an AI portfolio advisor.
+              </p>
+              <ul class="impact-list">
+                <li>Architected a multi-service system connecting an Angular dashboard and Spring Boot APIs to a PostgreSQL database on Google Cloud.</li>
+                <li>Integrated an OpenAI chat assistant backed by a custom FastMCP tool server for automated fund recommendations and portfolio modeling.</li>
+              </ul>
+            </div>
             <div class="tag-row" aria-label="Technologies">
-              <span>React</span>
-              <span>API</span>
-              <span>Testing</span>
+              <span>Angular</span>
+              <span>Spring Boot</span>
+              <span>PostgreSQL</span>
+              <span>AI / FastMCP</span>
             </div>
             <div class="card-actions">
-              <a class="button secondary" href="projects/project-one.html">Read the project story</a>
+              <a class="button secondary" href="projects/goldman-calculator.html">Read the project story</a>
             </div>
           </article>
 

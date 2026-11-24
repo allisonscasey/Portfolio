@@ -13,17 +13,6 @@
     >
     <link rel="stylesheet" href="../styles.css?v=5">
     <style>
-      .story-container {
-        max-width: 860px;
-        margin: 0 auto;
-      }
-      .story-meta {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 12px;
-        align-items: center;
-        margin: 16px 0 28px;
-      }
       .video-wrapper {
         position: relative;
         width: 100%;
@@ -32,7 +21,7 @@
         overflow: hidden;
         border: 1px solid var(--line);
         box-shadow: 0 12px 32px rgba(77, 33, 61, 0.08);
-        margin: 32px 0;
+        margin: 24px 0 8px;
         background: #000;
       }
       .video-wrapper iframe {
@@ -42,47 +31,18 @@
         height: 100%;
         border: 0;
       }
-      .story-section {
-        margin-top: 36px;
-      }
-      .story-section h2 {
-        font-size: 1.35rem;
-        margin-bottom: 12px;
-        color: var(--ink);
-      }
-      .arch-grid {
-        display: grid;
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 16px;
-        margin-top: 16px;
-      }
-      .arch-card {
-        padding: 20px;
-        border-radius: 14px;
-        border: 1px solid var(--line);
-        background: rgba(255, 255, 255, 0.65);
-      }
-      .arch-card h3 {
-        font-size: 1rem;
-        margin: 0 0 6px;
-        color: var(--ink);
-      }
-      .arch-card p {
-        margin: 0;
-        font-size: 0.92rem;
-        line-height: 1.55;
-      }
-      @media (max-width: 680px) {
-        .arch-grid {
-          grid-template-columns: 1fr;
-        }
+      .hero-btn-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 24px;
       }
     </style>
   </head>
   <body>
     <header class="site-header">
-      <a class="brand" href="../index.html#projects" aria-label="Back to Projects">
-        <span>&larr; Back to Projects</span>
+      <a class="brand" href="../index.html" aria-label="Allison Casey home">
+        <span>Allison Casey</span>
       </a>
       <nav class="nav-links" aria-label="Primary navigation">
         <a href="../index.html#about">About</a>
@@ -92,86 +52,100 @@
       </nav>
     </header>
 
-    <main class="section">
-      <div class="story-container">
-        <p class="eyebrow">Software &amp; Data</p>
-        <h1>Goldman Sachs Mutual Fund Calculator</h1>
-        <p>
-          An educational investment analysis platform built by a seven-person engineering team under Goldman Sachs mentorship, combining quantitative return projections, Monte Carlo risk modeling, and an AI-powered portfolio advisor.
-        </p>
-
-        <div class="story-meta">
-          <a class="button" href="https://github.com/ifidone/GS-ELS-Group3" target="_blank" rel="noopener noreferrer">View GitHub Repository</a>
-          <a class="button secondary" href="https://www.youtube.com/watch?v=YFyNY46obnU" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
-        </div>
-
-        <div class="tag-row" aria-label="Technologies">
-          <span>Angular</span>
-          <span>Spring Boot (Java 17)</span>
-          <span>FastMCP (Python)</span>
-          <span>PostgreSQL</span>
-          <span>Firebase Auth</span>
-          <span>Google Cloud</span>
-        </div>
-
-        <!-- Embedded Demo Video -->
-        <div class="video-wrapper">
-          <iframe
-            src="https://www.youtube.com/embed/YFyNY46obnU"
-            title="Goldman Sachs Mutual Fund Calculator Demo"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
-          ></iframe>
-        </div>
-
-        <section class="story-section">
-          <h2>System Architecture</h2>
-          <p>
-            Rather than relying on static client-side formulas, we designed a layered, multi-service architecture separating user authentication, financial computation, AI tool orchestration, and relational persistence[cite: 4]:
+    <main>
+      <!-- Top Hero Matching Your Template -->
+      <section class="section detail-hero">
+        <div class="detail-intro">
+          <p class="eyebrow">Software &amp; Data Project</p>
+          <h1>Goldman Sachs Mutual Fund Calculator</h1>
+          <p class="lead">
+            An educational investment analytics platform combining CAPM return projections, Monte Carlo risk simulations, and an AI-powered portfolio advisor.
           </p>
-          <div class="arch-grid">
-            <div class="arch-card">
-              <h3>Frontend (Angular &amp; TypeScript)</h3>
-              <p>
-                Single-page dashboard with Firebase authentication guards, interactive deterministic vs. Monte Carlo projection views, portfolio management, and a persistent chat interface[cite: 4].
-              </p>
-            </div>
-            <div class="arch-card">
-              <h3>Backend Core (Spring Boot)</h3>
-              <p>
-                REST API layer handling token verification, CAPM financial modeling, external market data ingestion (Newton APIs), Excel workbook exports, and Spring AI orchestration[cite: 4].
-              </p>
-            </div>
-            <div class="arch-card">
-              <h3>AI Tooling Layer (FastMCP)</h3>
-              <p>
-                Python tool-execution server enabling the chat model to query mutual funds, run simulations, compare saved calculations, and generate tailored portfolios via structured tool calls[cite: 4].
-              </p>
-            </div>
-            <div class="arch-card">
-              <h3>Database (PostgreSQL on GCP)</h3>
-              <p>
-                Relational schema managed through Flyway migrations storing UID-scoped user profiles, mutual fund catalogs, portfolios, and JSONB time-series projections[cite: 4].
-              </p>
-            </div>
+          <div class="hero-btn-group">
+            <a class="button primary" href="../index.html#projects">&larr; Back to projects</a>
+            <a class="button secondary" href="https://github.com/ifidone/GS-ELS-Group3" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+            <a class="button secondary" href="https://www.youtube.com/watch?v=YFyNY46obnU" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
           </div>
-        </section>
+        </div>
 
-        <section class="story-section">
-          <h2>Quantitative Modeling &amp; Key Features</h2>
-          <ul class="impact-list">
-            <li>
-              <strong>CAPM Future Value Projections:</strong> Fetches live beta and historical return data to compute annualized rates ($r = r_f + \beta(E[R] - r_f)$) and generate 20-year exponential growth curves ($FV = P \cdot e^{rt}$)[cite: 4].
-            </li>
-            <li>
-              <strong>Monte Carlo Simulations:</strong> Runs randomized return sampling around historical means across both single mutual funds and weighted multi-asset portfolios to surface percentile outcomes and risk metrics[cite: 4].
-            </li>
-            <li>
-              <strong>End-to-End Portfolio Workflows:</strong> Supports saving calculations, grouping assets into custom portfolios, exporting reports to Excel via Apache POI, and validating API/DB consistency with Postman and pgAdmin[cite: 4].
-            </li>
-          </ul>
-        </section>
-      </div>
+        <aside class="detail-card" aria-label="Project summary">
+          <div>
+            <span class="detail-label">Team &amp; Mentorship</span>
+            <p>7-person engineering team mentored by Goldman Sachs engineers</p>
+          </div>
+          <div>
+            <span class="detail-label">Focus</span>
+            <p>Full-stack architecture, quantitative modeling, AI tool-calling, and cloud persistence</p>
+          </div>
+          <div>
+            <span class="detail-label">Tools</span>
+            <p>Angular, TypeScript, Spring Boot (Java 17), FastMCP (Python), PostgreSQL, Firebase Auth, Google Cloud</p>
+          </div>
+        </aside>
+      </section>
+
+      <!-- Demo Video Section -->
+      <section class="section story-section">
+        <h2>Demo</h2>
+        <div>
+          <p>
+            Full end-to-end walkthrough of user authentication, mutual fund return projections, Monte Carlo portfolio simulations, and the AI chatbot assistant.
+          </p>
+          <div class="video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/YFyNY46obnU"
+              title="Goldman Sachs Mutual Fund Calculator Demo"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </section>
+
+      <!-- Overview Section -->
+      <section class="section story-section">
+        <h2>Overview</h2>
+        <div>
+          <p>
+            Rather than relying on static client-side formulas, we architected a layered, multi-service investment platform separating identity verification, quantitative math, AI tool orchestration, and relational persistence.
+          </p>
+          <p>
+            Authenticated users can evaluate individual mutual funds, compare deterministic growth curves against stochastic Monte Carlo outcomes, group saved calculations into custom portfolios, and export reports to Excel.
+          </p>
+        </div>
+      </section>
+
+      <!-- System Architecture Section -->
+      <section class="section story-section">
+        <h2>System Architecture</h2>
+        <ul class="impact-list">
+          <li>
+            <strong>Angular &amp; TypeScript Frontend:</strong> Built a single-page dashboard with Firebase route guards, shorthand input parsing, interactive projection charts, and a floating AI chat interface.
+          </li>
+          <li>
+            <strong>Spring Boot Backend Core:</strong> Developed REST endpoints handling Firebase token verification, live market data ingestion via Newton APIs, CAPM modeling, and Apache POI Excel exports.
+          </li>
+          <li>
+            <strong>FastMCP AI Tooling Layer:</strong> Integrated a Python tool-execution server enabling the OpenAI chat assistant to query mutual fund catalogs, run simulations, and generate portfolios via structured tool calls.
+          </li>
+          <li>
+            <strong>PostgreSQL on Google Cloud:</strong> Managed relational schemas via Flyway migrations to persist UID-scoped user accounts, portfolios, and JSONB 20-year time-series projections.
+          </li>
+        </ul>
+      </section>
+
+      <!-- Quantitative Modeling & Validation Section -->
+      <section class="section story-section">
+        <h2>Modeling &amp; Validation</h2>
+        <div>
+          <p>
+            Projection workflows fetch real-time beta and historical price deltas to compute CAPM annualized rates ($r = r_f + \beta(E[R] - r_f)$) and continuous compounding curves ($FV = P \cdot e^{rt}$). Alongside deterministic projections, our Monte Carlo engine samples randomized returns around historical means to surface percentile risk metrics across single funds and weighted portfolios.
+          </p>
+          <div class="callout-box">
+            <strong>End-to-End Verification:</strong> Validated all API endpoints, UID ownership rules, and database state transitions across Postman, pgAdmin, and Google Cloud runtime logs.
+          </div>
+        </div>
+      </section>
     </main>
 
     <footer class="site-footer">
